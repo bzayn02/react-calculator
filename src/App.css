@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    color: azure;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    min-height: 100vh;
+    background: rgba(52, 141, 169, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.mainParent {
+    width: 500px;
+    border-radius: 10px;
+    background: rgba(104, 103, 171, 0.61);
+    margin-top: 5rem;
+    padding: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.result {
+    border: 1px solid;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    background: rgba(201, 239, 251, 1);
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    box-shadow: -5px 5px 15px;
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.items {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: auto;
+}
+
+.items > * {
+    border-radius: 10px;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 30px;
+    box-shadow: -10px 10px 15px;
+    background: rgba(201, 239, 251, 1);
+}
+.items {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: auto;
+
+    grid-template-areas:
+        'clear clean off off'
+        'no-7 no-8 no-9 multiply'
+        'no-4 no-5 no-6 minus'
+        'no-1 no-2 no-3 ans'
+        'no-0 add divide ans';
+}
+
+.clear {
+    grid-area: clear;
+}
+.clean {
+    grid-area: clean;
+}
+.add {
+    grid-area: add;
+}
+.divide {
+    grid-area: divide;
+}
+.no-0 {
+    grid-area: no-0;
+}
+
+.minus {
+    grid-area: minus;
+}
+.multiply {
+    grid-area: multiply;
+}
+
+.ans {
+    grid-area: ans;
+}
+.no-1 {
+    grid-area: no-1;
+}
+.no-2 {
+    grid-area: no-2;
+}
+.no-3 {
+    grid-area: no-3;
+}
+.no-4 {
+    grid-area: no-4;
+}
+.no-5 {
+    grid-area: no-5;
+}
+.no-6 {
+    grid-area: no-6;
+}
+.no-7 {
+    grid-area: no-7;
+}
+.no-8 {
+    grid-area: no-8;
+}
+.no-9 {
+    grid-area: no-9;
+}
+
+.off {
+    grid-area: off;
+}
+
+.off {
+    background-color: black;
+}
+
+.prank {
+    background: red;
+    color: white;
 }
